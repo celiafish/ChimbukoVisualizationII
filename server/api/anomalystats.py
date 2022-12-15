@@ -180,9 +180,9 @@ def push_anomaly_metrics(q, anomaly_metrics: list, ts):
         last_step = max(last_step, t)
         item = (d['app'], d['fid'], d['fname'].split()[0])
         if item in top_fids:
-            top_fids[item] += 1
+            top_fids[item] += d['new_data']['severity'][statKind]
         else:
-            top_fids[item] = 1
+            top_fids[item] = d['new_data']['severity'][statKind]
         # if int(item[1]) == _test_ind:
         #     _test_fid.append(d['rank'])
     
@@ -203,9 +203,9 @@ def push_anomaly_metrics(q, anomaly_metrics: list, ts):
     for d in anomaly_metrics:
         item = (d['app'], d['rank'])
         if item in top_ranks:
-            top_ranks[item] += 1
+            top_ranks[item] += d['new_data']['severity'][statKind]
         else:
-            top_ranks[item] = 1
+            top_ranks[item] = d['new_data']['severity'][statKind]
 
     ordered_ranks = sorted(top_ranks.items(), key=lambda item: item[0][1])
     hist_ordered_ranks = [[item[0][0], item[0][1], item[1], first_step, last_step]

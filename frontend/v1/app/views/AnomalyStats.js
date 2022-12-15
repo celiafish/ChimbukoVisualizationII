@@ -192,7 +192,7 @@ class AnomalyStats extends React.Component
                         yAxes: [{
                             scaleLabel: {
                                 display: true,
-                                labelString: `count` //statKind
+                                labelString: `severity` //statKind
                             }
                         }]
                     }         
