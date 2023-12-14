@@ -30,7 +30,7 @@
     "@material-ui/icons": "^4.2.1",
     "@material-ui/lab": "^4.0.0-alpha.29",
     "@material-ui/styles": "^4.3.3",
-    "axios": "^1.6.0",
+    "axios": "^0.21.2",
     "chart.js": "^2.9.4",
     "chartjs-plugin-streaming": "1.8.0",
     "chartjs-plugin-zoom": "^0.7.7",
@@ -48,7 +48,7 @@
     "redux": "^4.0.4",
     "redux-thunk": "^2.3.0",
     "reselect": "^4.0.0",
-    "socket.io": "^4.7.2",
+    "socket.io": "^2.5.0",
     "socket.io-client": "^2.2.0"
   }
 }
